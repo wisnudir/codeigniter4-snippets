@@ -1,0 +1,37 @@
+{
+	"name": "codeigniter4-snippets",
+	"displayName": "Codeigniter 4 Snippets",
+	"description": "(Alpha Version) Snippets for Codeigniter 4 in VS Code",
+	"version": "0.0.1",
+	"publisher": "wisnudir",
+	"engines": {
+		"vscode": "^1.28.0"
+	},
+  "keywords": [
+    "PHP",
+    "CI",
+    "codeIgniter",
+		"framework",
+		"snippets"
+  ],
+	"categories": [
+		"Snippets"
+	],
+  "icon": "cilogo.png",
+  "galleryBanner": {
+    "color": "#dd5106",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anish137i/ci-snippets2.git"
+  },
+	"contributes": {
+		"snippets": [
+			{
+				"language": "php",
+				"path": "./snippets.json"
+			}
+		]
+	}
+}

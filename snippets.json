@@ -1,0 +1,177 @@
+{  
+  "load_helper": {
+    "prefix": "ci4.load.helper",
+    "body": "helper(['${1:helper_name}']);",
+    "description": "CI4 - Loading a Helper"
+  },
+  "cache": {
+    "prefix": "ci4.cache",
+    "body": "cache('${1:key}');",
+    "description": "CI4 - Returns: Either the cache object or the item retrieved from the cache"
+  },
+  "session": {
+    "prefix": "ci4.session",
+    "body": "session('${1:key}');",
+    "description": "CI4 - Returns: An instance of the Session object if no $key, the value found in the session for $key, or null."
+  },
+  "timer": {
+    "prefix": "ci4.timer",
+    "body": "timer('${1:benchmark_point}');",
+    "description": "CI4 - A convenience method that provides quick access to the Timer class."
+  },
+  "view": {
+    "prefix": "ci4.view",
+    "body": "view('${1:file_name}', '${2:data}');",
+    "description": "CI4 - Grabs the current RendererInterface-compatible class and tells it to render the specified view."
+  },
+  "env": {
+    "prefix": "ci4.env",
+    "body": "env('${1:key}');",
+    "description": "CI4 - Used to retrieve values that have previously been set to the environment, or return a default value if it is not found."
+  },
+  "old": {
+    "prefix": "ci4.old",
+    "body": "old('${1:key}');",
+    "description": "CI4 - Provides a simple way to access “old input data” from submitting a form."
+  },
+  "csrf_token": {
+    "prefix": "ci4.csrf.token",
+    "body": "csrf_token()$1",
+    "description": "CI4 - Returns the name of the current CSRF token."
+  },
+  "csrf_header": {
+    "prefix": "ci4.csrf.header",
+    "body": "csrf_header()$1",
+    "description": "CI4 - The name of the header for current CSRF token."
+  },
+  "csrf_hash": {
+    "prefix": "ci4.csrf.hash",
+    "body": "csrf_hash()$1",
+    "description": "CI4 - Returns the current CSRF hash value."
+  },
+  "csrf_field": {
+    "prefix": "ci4.csrf.field",
+    "body": "csrf_field()$1",
+    "description": "CI4 - Returns a hidden input with the CSRF information already inserted."
+  },
+  "csrf_meta": {
+    "prefix": "ci4.csrf.meta",
+    "body": "csrf_meta()$1",
+    "description": "CI4 - Returns a meta tag with the CSRF information already inserted."
+  },
+  "force_https": {
+    "prefix": "ci4.force.https",
+    "body": "force_https('${1:duration}', '${2:request}', '${3:response}');",
+    "description": "CI4 - Checks to see if the page is currently being accessed via HTTPS."
+  },
+  "is_cli": {
+    "prefix": "ci4.is.cli",
+    "body": "is_cli()$1",
+    "description": "CI4 - Returns TRUE if the script is being executed from the command line or FALSE otherwise"
+  },
+  "log_message": {
+    "prefix": "ci4.log.message",
+    "body": "log_message('${1:level}', '${2:message}', '${3:context}');",
+    "description": "CI4 - Logs a message using the Log Handlers defined in app/Config/Logger.php"
+  },
+  "redirect": {
+    "prefix": "ci4.redirect",
+    "body": "redirect('${1:named_or_reverse-routed_URI}');",
+    "description": "CI4 - Returns a RedirectResponse instance allowing you to easily create redirects."
+  },
+  "redirect_back": {
+    "prefix": "ci4.red.back",
+    "body": "redirect()->back();",
+    "description": "CI4 - Go back to the previous page."
+  },
+  "redirect_to": {
+    "prefix": "ci4.red.to",
+    "body": "redirect()->to('/${1:URI}');",
+    "description": "CI4 - Go to specific URI."
+  },
+  "redirect_route": {
+    "prefix": "ci4.red.route",
+    "body": "redirect()->route('${1:named_or_reverse-routed_URI}');",
+    "description": "CI4 -  Go to a named/reverse-routed URI."
+  },
+  "redirect_back_withInput": {
+    "prefix": "ci4.red.back.with.input",
+    "body": "redirect()->back()->withInput();",
+    "description": "CI4 - Keep the old input values upon redirect so they can be used by the old() function."
+  },
+  "redirect_with_flash": {
+    "prefix": "ci4.red.flash",
+    "body": "redirect()->back()->with('${1:key}', '${2:message}');",
+    "description": "CI4 - Set a flash message when redirect."
+  },
+  "remove_invisible_characters": {
+    "prefix": "ci4.remove.invisible.char",
+    "body": "remove_invisible_characters('${1:str}');",
+    "description": "CI4 - This function prevents inserting NULL characters between ASCII characters, like Javascript."
+  },
+  "route_to": {
+    "prefix": "ci4.route.to",
+    "body": "route_to('${1:method}', '${2:param}');",
+    "description": "CI4 - Generates a relative URI for you based on either a named route alias, or a controller::method combination."
+  },
+  "service": {
+    "prefix": "ci4.service",
+    "body": "service('${1:name}');",
+    "description": "CI4 - Provides easy access to any of the Services defined in the system. "
+  },
+  "service_APPPATH": {
+    "prefix": "ci4.service.APPPATH",
+    "body": "service('${1:name}', 'APPPATH.${2:param}');",
+    "description": "CI4 - Provides easy access to any of the Services defined in the system AND if the creation method requires additional parameters."
+  },
+  "single_service": {
+    "prefix": "ci4.single.service",
+    "body": "single_service('${1:name}');",
+    "description": "CI4 - Identical to the service() function described above, except that all calls to this function will return a new instance of the class, where service returns the same instance every time. "
+  },
+  "stringify_attributes": {
+    "prefix": "ci4.stringify.attributes",
+    "body": "stringify_attributes('${1:attributes}', '${2:js});",
+    "description": "CI4 - Helper function used to convert a string, array, or object of attributes to a string. "
+  },
+  "APPPATH": {
+    "prefix": "APPPATH",
+    "body": "APPPATH$1",
+    "description": "CI4 - The path to the app directory. "
+  },
+  "ROOTPATH": {
+    "prefix": "ROOTPATH",
+    "body": "ROOTPATH$1",
+    "description": "CI4 - The path to the project root directory. Just above APPPATH. "
+  },
+  "SYSTEMPATH": {
+    "prefix": "SYSTEMPATH",
+    "body": "SYSTEMPATH$1",
+    "description": "CI4 - The path to the system directory. "
+  },
+  "FCPATH": {
+    "prefix": "FCPATH",
+    "body": "FCPATH$1",
+    "description": "CI4 - The path to the directory that holds the front controller. "
+  },
+  "WRITEPATH": {
+    "prefix": "WRITEPATH",
+    "body": "WRITEPATH$1",
+    "description": "CI4 - The path to the writable directory. "
+  },
+  "throw_exception": {
+    "prefix": "ci4.throw.exception",
+    "body": "throw new \\Exception('${1:message}');",
+    "description": "CI4 - Throw new exception. "
+  },
+  "try_catch": {
+    "prefix": "ci4.try.catch",
+    "body": "try {\n\t//... Something throws error here\n}\ncatch (\\Exception $e)\n{\n\tdie($e->getMessage());\n}\n",
+    "description": "CI4 - If you are calling a method that might throw an exception, you can catch that exception using a try/catch. "
+  },
+  "cache_page": {
+    "prefix": "ci4.service",
+    "body": "$this->cachePage('${1:time}');",
+    "description": "CI4 - To enable caching. "
+  }
+}
